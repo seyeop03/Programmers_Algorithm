@@ -9,9 +9,9 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.nodeCount = 0
-        self.head = Node(None)
+        self.head = Node(None) # data에 None, 즉 head가 <Dummy Node>
         self.tail = None
-        self.head.next = self.tail
+        self.head.next = self.tail # head
 
     def traverse(self):
         result = []
