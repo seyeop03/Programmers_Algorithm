@@ -45,8 +45,8 @@ class LinkedList:
             self.head = newNode
 
         else:
-            if pos == self.nodeCount + 1:
-                prev = self.tail
+            if pos == self.nodeCount + 1: # 끝에 추가할 경우엔
+                prev = self.tail # 굳이 getAt사용할 필요 X
             else:
                 prev = self.getAt(pos - 1)
             newNode.next = prev.next
