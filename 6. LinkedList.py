@@ -63,7 +63,7 @@ class LinkedList:
                 raise IndexError
             if pos == 1:
                 curr = self.head
-                self.head = curr.next # 2번째 노드를 head로
+                self.head = curr.next # pop이니까 2번째 노드를 head로
                 if pos == self.nodeCount:
                     self.tail = None
             else:

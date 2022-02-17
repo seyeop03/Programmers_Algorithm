@@ -45,14 +45,13 @@ class LinkedList:
         return curr
 
 
-    # 원소의 삽입(전 노드를 알고 있는 경우)
+    # 원소의 삽입(전 노드를 알고 있는 경우 연결만 바꾸기만 하면 됨)
     def insertAfter(self, prev, newNode):
-        curr = prev.next
+        newNode.next = prev.next
         # prev(전 노드)가 tail일 경우/즉, 맨끝에 삽입할 경우 -> tail의 재정의 필요
-        if curr is None:
+        if prev.next is None:
             self.tail = newNode
         prev.next = newNode
-        newNode.next = curr
         self.nodeCount += 1
         return True
 
@@ -93,9 +92,7 @@ class LinkedList:
 
 
     def concat(self, L):
-        prev = self.tail
-        next = self.head.next
-        prev.next = next
+        self.tail.next = L.head.next
         if L.tail:
             self.tail = L.tail
         self.nodeCount += L.nodeCount
