@@ -65,7 +65,7 @@ class LinkedList:
         if pos != 1 and pos == self.nodeCount + 1:
             prev = self.tail
         else:
-            prev = self.getAt(pos - 1)
+            prev = self.getAt(pos - 1) # 6.연결리스트에서는 pos가 1일경우 getAt사용이 불가하여 pos가 1인경우를 따로 구현해줘야햇음
         return self.insertAfter(prev, newNode)
 
 
