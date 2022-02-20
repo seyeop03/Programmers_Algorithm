@@ -2,8 +2,6 @@
 
 # LinkedList
 
----
-
 ## insertAt ( <span style="color: blue">LinkedList</span> )
 
 - **1**에 추가할때 그놈을 헤드로..
