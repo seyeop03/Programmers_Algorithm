@@ -1,5 +1,5 @@
 # LinkedList
-
+&nbsp;
 ## insertAt ( <span style="color: blue">LinkedList</span> )
 
 - **1**에 추가할때 그놈을 헤드로..
@@ -15,7 +15,7 @@
 
 - <newNode가 prev노드 next를 가리키게>하고, <prev노드 next는 newNode를 가리키게>
 
-&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
 
 ## popAt ( LinkedList )
 
