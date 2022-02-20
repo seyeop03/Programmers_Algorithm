@@ -17,17 +17,24 @@ class DoublyLinkedList:
         self.tail.prev = self.head
         self.tail.next = None
 
+    def traverse(self):
+        result = []
+        curr = self.head
+        while curr.next.next:
+            curr = curr.next
+            result.append(curr.data)
+        return result
+
 
     def reverse(self):
         result = []
-        curr = self.tail
-        
+        curr = self.tail    
         while curr.prev.prev:
             curr = curr.prev
             result.append(curr.data)
-            
         return result
     
+
     def getAt(self, pos):
         if pos < 0 or pos > self.nodeCount:
             return None
@@ -56,7 +63,15 @@ class DoublyLinkedList:
         next.prev = newNode
         self.nodeCount += 1
         return True
-
+        
+    def insertBefore(self, next, newNode):
+        prev = next.prev
+        newNode.prev = prev
+        newNode.next = next
+        prev.next = newNode
+        next.prev = newNode
+        self.nodeCount += 1
+        return True
 
     def insertAt(self, pos, newNode):
         if pos < 1 or pos > self.nodeCount + 1:
