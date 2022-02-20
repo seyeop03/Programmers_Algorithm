@@ -38,7 +38,7 @@ class LinkedList:
 
     def insertAt(self, pos, newNode):
         if pos < 1 or pos > self.nodeCount + 1:
-            return False
+            raise IndexError
 
         if pos == 1: # 첫번째 인덱스에 삽입하는 경우는 그냥 head만 갈켜주면 된다. 그래서 이전 노드가 필요없다.
             newNode.next = self.head # 데이터를 처음으로 추가할 때도 이 코드로 커버 가능하다.
@@ -59,21 +59,21 @@ class LinkedList:
         return True
 
     def popAt(self, pos):
-            if pos < 1 or self.nodeCount < pos:
-                raise IndexError
-            if pos == 1: # 데이터가 1개일 때도 이 코드로 커버 가능하다. 그냥 None을 head로 놓는거니까
-                curr = self.head
-                self.head = curr.next # pop이니까 2번째 노드를 head로
-                if pos == self.nodeCount:
-                    self.tail = None
-            else:
-                prev = self.getAt(pos-1)
-                curr = prev.next
-                prev.next = curr.next
-                if pos == self.nodeCount:
-                    self.tail = prev
+        if pos < 1 or self.nodeCount < pos:
+            raise IndexError
+        if pos == 1: # 데이터가 1개일 때도 이 코드로 커버 가능하다. 그냥 None을 head로 놓는거니까
+            curr = self.head
+            self.head = curr.next # pop이니까 2번째 노드를 head로
+            if pos == self.nodeCount:
+                self.tail = None
+        else:
+            prev = self.getAt(pos-1)
+            curr = prev.next
+            prev.next = curr.next
+            if pos == self.nodeCount:
+                self.tail = prev
             self.nodeCount -= 1
-            return curr.data
+        return curr.data
 
 
     def traverse(self):

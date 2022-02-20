@@ -74,12 +74,11 @@ class LinkedList:
         curr = prev.next
         if curr is None:
             return None
-        data = curr.data
         if curr.next is None:
             self.tail = prev
         prev.next = curr.next
         self.nodeCount -= 1
-        return data
+        return curr.data
 
 
     # popAfter 활용
