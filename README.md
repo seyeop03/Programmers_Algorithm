@@ -15,7 +15,7 @@
 
 - <newNode가 prev노드 next를 가리키게>하고, <prev노드 next는 newNode를 가리키게>
 
-
+&nbsp;&nbsp;
 
 ## popAt ( LinkedList )
 
