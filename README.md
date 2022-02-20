@@ -1,6 +1,6 @@
 # LinkedList
 &nbsp;
-## insertAt ( ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `#f03c15`LinkedList )
+## insertAt ( ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=LinkedList) `#f03c15` )
 
 - **1**에 추가할때 그놈을 헤드로..
 - **나머지인덱스**는 prev노드를 먼저 찾고, 
