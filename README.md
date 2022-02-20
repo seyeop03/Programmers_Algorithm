@@ -1,17 +1,17 @@
 # LinkedList
 &nbsp;
-insertAt ( <span style="color: blue">LinkedList</span> )
+## insertAt ( <u>LinkedList</u> )
 
 - **1**에 추가할때 그놈을 헤드로..
 - **나머지인덱스**는 prev노드를 먼저 찾고, 
   - <newNode가 prev노드 next를 가리키게>하고, <prev노드 next는 newNode를 가리키게>
 - (+추가) 맨끝+1 인덱스에 노드집어넣을경우 그 노드를 tail로 조정
 
-## insertAt ( <span style="color: red">Dummy LinkedList</span> )
+## insertAt ( <u>Dummy LinkedList</u> )
 
 - 그냥 prev노드 찾아서 insertAfter을 호출
 
-## insertAfter ( <span style="color: red">Dummy LinkedList</span> )
+## insertAfter ( <u>Dummy LinkedList</u> )
 
 - <newNode가 prev노드 next를 가리키게>하고, <prev노드 next는 newNode를 가리키게>
 
