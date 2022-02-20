@@ -1,6 +1,6 @@
 # LinkedList
 &nbsp;
-### insertAt ( <span style="color: blue">LinkedList</span> )
+insertAt ( <span style="color: blue">LinkedList</span> )
 
 - **1**에 추가할때 그놈을 헤드로..
 - **나머지인덱스**는 prev노드를 먼저 찾고, 
