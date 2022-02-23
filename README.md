@@ -40,8 +40,11 @@
 
 - prev의 next가 curr.next를 가리키도록!
   - 단, prev의 next가 None이면(<u>끝놈을 삭제했을 경우</u>), <u>tail을 prev</u>로 조정
+
 <br>
+
 ---
+
 <br>
 
 # Stack
