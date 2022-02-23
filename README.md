@@ -8,6 +8,8 @@
   - <newNode가 prev노드 next를 가리키게>하고, <prev노드 next는 newNode를 가리키게>
 - (+추가) 맨끝+1 인덱스에 노드집어넣을경우 그 노드를 tail로 조정
 
+<br>
+
 ### insertAt ( <u>Dummy LinkedList</u> )
 
 - 그냥 prev노드 찾아서 insertAfter을 호출
@@ -27,6 +29,8 @@
 
 - **나머지 인덱스** 꺼낼때는 prev찾고, prev의 next가 curr.next를 가리키도록!
   - 단, 맨 마지막놈을 꺼낼땐 tail도 하나 전껄로 변경
+
+<br>
 
 ### popAt ( Dummy LinkedList )
 
