@@ -21,14 +21,19 @@ class DoublyLinkedList:
     def __repr__(self):
         if self.nodeCount == 0:
             return 'LinkedList: empty'
+
         s = ''
         curr = self.head
-        while curr is not None:
-            s += repr(curr.data)
-            if curr.next is not None:
-                s += ' -> '
+        while curr.next.next:
             curr = curr.next
+            s += repr(curr.data)
+            if curr.next.next is not None:
+                s += ' -> '
         return s
+
+
+    def getLength(self):
+        return self.nodeCount
 
 
     def traverse(self):
