@@ -1,6 +1,6 @@
 # LinkedList
 &nbsp;
-## insertAt ( LinkedList ) vs insertAt ( <u>Dummy LinkedList</u> )
+## 0x01. insertAt ( LinkedList ) vs insertAt ( <u>Dummy LinkedList</u> )
 
 ### insertAt ( LinkedList )
 - **1**에 추가할때 그놈을 헤드로..
@@ -19,7 +19,7 @@
 &nbsp;&nbsp;&nbsp;
 
 
-## popAt ( LinkedList ) vs popAt ( Dummy LinkedList )
+## 0x02. popAt ( LinkedList ) vs popAt ( Dummy LinkedList )
 
 ### popAt ( LinkedList )
 - **1**을 꺼낼때 현재헤드의 next를(None을) 새롭게 head로..
