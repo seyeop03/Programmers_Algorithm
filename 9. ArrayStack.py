@@ -1,8 +1,6 @@
-doublylinkedlist = __import__("DoublyLinkedList")
+# 사실 파이썬에는 from pythonds.basic.stack import Stack으로 이미 만들어진 라이브러리가 구현되어있다.
 
-from doublylinkedlist import Node
-from doublylinkedlist import DoublyLinkedList
-
+### 스택을 Python리스트와 메서드들을 이용하여 구현
 
 class ArrayStack:
 
@@ -23,25 +21,3 @@ class ArrayStack:
 
 	def peek(self):
 		return self.data[-1]
-
-
-class LinkedListStack:
-
-	def __init__(self):
-		self.data = DoublyLinkedList()
-
-	def size(self):
-		return self.data.getLength()
-
-	def isEmpty(self):
-		return self.size() == 0
-
-	def push(self, item):
-		node = Node(item)
-		self.data.insertAt(self.size() + 1, node)
-
-	def pop(self):
-		return self.data.popAt(self.size())
-
-	def peek(self):
-		return self.data.getAt(self.size()).data
