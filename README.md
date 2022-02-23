@@ -37,6 +37,8 @@
 - prev의 next가 curr.next를 가리키도록!
   - 단, prev의 next가 None이면(<u>끝놈을 삭제했을 경우</u>), <u>tail을 prev</u>로 조정
 
+---
+
 # Stack
 
 > 연산자 우선순위가 높다: 상대적으로 스택 꼭대기 근방에 있다.
