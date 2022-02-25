@@ -1,5 +1,8 @@
 # 사실 파이썬에는 from pythonds.basic.queue import Queue으로 이미 만들어진 라이브러리가 구현되어있다.
 
+# 큐의 활용:
+# 자료를 생성하는 작업과 그 자료를 이용하는 작업이
+# 비동기적으로(asynchronously) 일어나는 경우
 class ArrayQueue:
 
     def __init__(self):
