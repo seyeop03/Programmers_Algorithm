@@ -40,9 +40,8 @@ def solution(S):
                 answer += opStack.pop()
             opStack.pop()
         elif c in prec:
-            if not opStack.isEmpty():
-                while not opStack.isEmpty() and prec[opStack.peek()] >= prec[c]:
-                    answer += opStack.pop()
+            while not opStack.isEmpty() and prec[opStack.peek()] >= prec[c]:
+                answer += opStack.pop()
             opStack.push(c)      
             
     while not opStack.isEmpty():
