@@ -30,7 +30,6 @@ def solution(expr):
     for c in expr:
         if c in '({[':
              S.push(c)
-             print(S.peek())
         elif c in match:
             if S.isEmpty():
                 return False
@@ -40,3 +39,5 @@ def solution(expr):
                     return False
     return S.isEmpty()
 
+print(solution('{(A+B)*(C+D)+4}*24'))
+# 괄호들의 짝이 맞는지 아닌지 확인하는 코드
