@@ -136,7 +136,7 @@ class PriorityQueue:
         # curr.next.next로 노드가 있는지 없는지 굳이 확인하는 이유는
         # 오직 실질적인 데이터만 가지고 비교연산을 하기 위함이다.
         # 만약 curr.next.next가 없고, 우선순위가 가장 높은 큐를 집어넣으려고 할 때
-        # 결국에는 데이터가 없는 tail과 비교를 하기때문에 반드시 비교할 구간을 정해주어야 한다.
+        # 결국에는 의미없는 tail과 비교를 하기때문에 반드시 비교할 구간을 정해주어야 한다.
         while curr.next.next and newNode.data < curr.next.data: 
             curr = curr.next
         self.queue.insertAfter(curr, newNode)
