@@ -4,9 +4,8 @@
 def solution(L, x):
     for idx, num in enumerate(L):
         if num > x:
-            idx -= 1
             break
-    L.insert(idx+1,x)
+    L.insert(idx,x)
     
     return L
 
