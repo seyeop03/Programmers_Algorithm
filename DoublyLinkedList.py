@@ -1,3 +1,5 @@
+### 일반적인 LinkedList의 경우 뒤로갈 수가 없다. 이러한 한계를 극복하기위해 양방향연결리스트를 구현한다.
+
 class Node:
 
     def __init__(self, item):
