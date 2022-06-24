@@ -60,7 +60,7 @@ class DoublyLinkedList:
     def getAt(self, pos):
         if pos < 0 or pos > self.nodeCount:
             return None
-    # 반으로 줄여서 탐색하기 위함
+    # 반으로 줄여서 탐색하기 위함(두동강내서 반이상이면 tail부터, 반이하면 head부터 )
         if pos > self.nodeCount // 2:
             i = 0
             curr = self.tail
