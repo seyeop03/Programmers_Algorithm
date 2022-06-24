@@ -15,7 +15,7 @@ class LinkedList:
 	
     def __init__(self):
         self.nodeCount = 0
-        self.head = Node(None)
+        self.head = Node(None) # head는 Dummy Node로서 고정되어 있다.
         self.tail = None
         self.head.next = self.tail
 
