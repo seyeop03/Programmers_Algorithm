@@ -64,7 +64,7 @@ class LinkedList:
         if pos == 1: # 데이터가 1개일 때도 이 코드로 커버 가능하다. 그냥 None을 head로 놓는거니까
             curr = self.head
             self.head = curr.next # pop이니까 2번째 노드를 head로
-            if pos == self.nodeCount:
+            if pos == self.nodeCount: # pos==1 && pos==self.nodeCount는 노드갯수가 1개뿐이라는 의미
                 self.tail = None
         else:
             prev = self.getAt(pos-1)
