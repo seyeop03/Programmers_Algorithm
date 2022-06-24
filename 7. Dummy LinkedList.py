@@ -72,9 +72,9 @@ class LinkedList:
     # 원소의 삭제(삭제하는 노드의 data를 리턴)
     def popAfter(self, prev):
         curr = prev.next
-        if curr is None:
+        if curr is None: # prev.next가 None -> 데이터가 Dummy밖에 없을 때
             return None
-        if curr.next is None:
+        if curr.next is None: # 맨끝의 노드를 삭제할 때
             self.tail = prev
         prev.next = curr.next
         self.nodeCount -= 1
