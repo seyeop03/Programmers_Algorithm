@@ -14,7 +14,7 @@
 
 - 그냥 prev노드 찾아서 insertAfter을 호출
 
-### insertAfter ( <u>Dummy LinkedList</u> )
+#### insertAfter ( <u>Dummy LinkedList</u> )
 
 - <newNode가 prev노드 next를 가리키게>하고, <prev노드 next는 newNode를 가리키게>
 
@@ -36,7 +36,7 @@
 
 - 그냥 prev찾아서 popAfter 호출
 
-### popAfter ( Dummy LInkedList )
+#### popAfter ( Dummy LInkedList )
 
 - prev의 next가 curr.next를 가리키도록!
   - 단, prev의 next가 None이면(<u>끝놈을 삭제했을 경우</u>), <u>tail을 prev</u>로 조정
