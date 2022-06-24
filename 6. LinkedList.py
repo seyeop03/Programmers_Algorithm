@@ -52,7 +52,7 @@ class LinkedList:
             newNode.next = prev.next
             prev.next = newNode
 
-        if pos == self.nodeCount + 1:
+        if pos == self.nodeCount + 1: # 맨끝에 추가할 경우 요코드까지 같이 실행
             self.tail = newNode
 
         self.nodeCount += 1
