@@ -48,7 +48,7 @@ class LinkedList:
     # 원소의 삽입(전 노드를 알고 있는 경우 연결만 바꾸기만 하면 됨)
     def insertAfter(self, prev, newNode):
         newNode.next = prev.next
-        # prev(전 노드)가 tail일 경우/즉, 맨끝에 삽입할 경우 -> tail의 재정의 필요
+        # 맨끝에 삽입할 경우 -> tail의 재정의 필요
         if prev.next is None:
             self.tail = newNode
         prev.next = newNode
