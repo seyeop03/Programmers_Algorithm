@@ -1,5 +1,5 @@
 ### 일반적인 LinkedList의 경우 뒤로갈 수가 없다. 이러한 한계를 극복하기위해 양방향연결리스트를 구현한다.
-### Dummy 를 맨처음, 맨끝 2개를 둔다.
+### Dummy 를 맨처음(head), 맨끝(tail) 2개를 둔다. head, tail이 Dummy로서 고정되어 있으므로 따로 head,tail을 재조정한다거나 할 필요가 없다. 
 
 class Node:
 
