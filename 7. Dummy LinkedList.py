@@ -36,7 +36,7 @@ class LinkedList:
         if pos < 0 or pos > self.nodeCount:
             raise IndexError
 
-        # 시작이 head(더미 노드)이기 때문에 0부터 시작해도 된다.
+        # 시작이 head(더미 노드)이기 때문에 0부터 시작한다.
         i = 0
         curr = self.head
         while i < pos:
