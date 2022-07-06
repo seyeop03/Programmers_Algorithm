@@ -23,7 +23,7 @@ class Node:
         else:
             return r + 1
 
-    # Depth Breadth First의 중위순회(in-order)는 left->자기자신->right 이다.
+    # Depth Breadth First의 중위순회(in-order)는 left subtree->자기자신->right subtree이다.
     def inorder(self):
         traversal = []
         if self.left: # left먼저
@@ -32,6 +32,17 @@ class Node:
         if self.right: # 마지막 right
             traversal += self.right.inorder()
         return traversal
+
+    # Depth Breadth First의 전위순회(pre-order)는 자기자신->left subtree->right subtree이다.
+    def preorder(self):
+        traversal = []
+        traversal.append(self.data)
+        if self.left:
+            traversal += self.left.preorder()
+        if self.right:
+            traversal += self.right.preorder()
+        return traversal
+
 
 class BinaryTree:
     # 트리의 루트노드 지정
@@ -56,3 +67,9 @@ class BinaryTree:
             return self.root.inorder()
         else:
             return 0
+
+    def preorder(self):
+        if self.root:
+            return self.root.preorder()
+        else:
+            return []
