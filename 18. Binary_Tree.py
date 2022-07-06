@@ -42,6 +42,16 @@ class Node:
         if self.right:
             traversal += self.right.preorder()
         return traversal
+    
+    # Depth Breadth First의 후위순회(post-order)는 left subtree->right subtree->자기자신 이다.
+    def postorder(self):
+        traversal = []
+        if self.left:
+            traversal += self.left.postorder()
+        if self.right:
+            traversal += self.right.postorder()
+        traversal.append(self.data)
+        return traversal
 
 
 class BinaryTree:
@@ -71,5 +81,11 @@ class BinaryTree:
     def preorder(self):
         if self.root:
             return self.root.preorder()
+        else:
+            return []
+    
+    def postorder(self):
+        if self.root:
+            return self.root.postorder()
         else:
             return []
