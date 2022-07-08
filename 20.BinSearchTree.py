@@ -8,7 +8,18 @@ class Node:
 
 
     def insert(self, key, data):
-        pass
+        if key < self.key:
+            if self.left:
+                self.left.insert(key, data)
+            else:
+                self.left = Node(key, data)
+        elif key > self.key:
+            if self.right:
+                self.right.insert(key, data)
+            else:
+                self.right = Node(key, data)
+        else:
+            raise KeyError('Error')
 
 
     def inorder(self):
@@ -33,6 +44,8 @@ class Node:
                 return self.right.lookup(key, self)
             else:
                 return None, None
+        else:
+            return self, parent
 
 
     def min(self):
