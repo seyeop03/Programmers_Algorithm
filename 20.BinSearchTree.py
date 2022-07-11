@@ -19,7 +19,7 @@ class Node:
             else:
                 self.right = Node(key, data)
         else:
-            raise KeyError('Error')
+            raise KeyError('Key %s already exists.' % key)
 
 
     def inorder(self):
@@ -48,6 +48,15 @@ class Node:
             return self, parent
 
 
+    def countChildren(self):
+        count = 0
+        if self.left:
+            count += 1
+        if self.right:
+            count += 1
+        return count
+
+
     def min(self):
         if self.left:
             return self.left.min()
@@ -59,6 +68,9 @@ class Node:
             return self.right.max()
         else:
             return None
+
+
+
 
 class BinSearchTree:
 
