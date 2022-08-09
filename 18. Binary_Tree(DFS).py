@@ -8,7 +8,8 @@ class Node:
     # 전체 이진 트리의 size() ==  left subtree의 size() + right subtree의 size() + 1
     # 또 <left subtree>, <right subtree> 의 각 root가 있을테니 각 노드의 left subtree의 size() + right subtree의 size() + 1
     # ⋯ 계속 ⋯ (I'm gonna reduce it again and keep doing that until I get down to a simple case that I can solve directly.)
-    # <추가> : L에서 l+r+1을 계산해서오고, R에서도 l+r+1을 계산해서 온다면, 호출한 Node를 포함한 갯수가 L+R+1임은 자명하다.
+    # <추가> : L에서 l+r+1을 계산해서오고, R에서도 l+r+1을 계산해서 온다면, 호출한 Node를 포함한 갯수는 L+R+1이다
+    # 즉, 자식 L,R을 부르고 -> L+R+1을 계산한 뒤 -> 최종적으로 L+R+1을 부모에게 돌려준다.
     def size(self):
         l = self.left.size() if self.left else 0 # 지금 노드(n)의 왼쪽 자식이 있으면 left.size() 호출
         r = self.right.size() if self.right else 0 # 지금 노드(n)의 오른쪽 자식이 있으면 right.size() 호출
