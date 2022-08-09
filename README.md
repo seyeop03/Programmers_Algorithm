@@ -108,3 +108,16 @@ infix -> postfix
 
 - **[중위]** A * (B - (C + D))
 - **[후위]** A B C D + - *
+
+# 힙(Heap) 이란?
+
+- __이진 트리__의 한 종류 (이진 힙 - binary heap)
+  - 루트 (root) 노드가 언제나 최댓값 or 최솟값을 가짐
+    - 최대 힙 (max heap), 최소 힙 (min heap)
+  - ex) 최대 힙 : 부모는 무조건 자식보다 큼
+- __완전 이진 트리__여야 함
+
+> 완전 이진 트리: leaf 노드가 아니라면 다 채워져 있는 트리
+>
+> 이진 탐색 트리: left subtree < 자기자신 < right subtree
+
