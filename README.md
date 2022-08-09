@@ -122,8 +122,8 @@ infix -> postfix
     - 최대 힙 (max heap), 최소 힙 (min heap)
     - ex) 최대 힙 : 부모는 무조건 자식보다 큼
     - ex) 최소 힙 : 부모는 무조건 자식보다 작음
-  - But, left subtree와 right subtree는 `부모보다 작다는 것` 외에는 관계 X
-    - 따라서 이진 탐색 트리보다는 느슨한   
+  - But, `left subtree`와 `right subtree`는 `부모보다 작다는 것` 외에는 관계 X
+    - 따라서 이진 탐색 트리보다는 느슨한 정렬
 - **완전 이진 트리**여야 함
 
 > 완전 이진 트리: leaf 노드가 아니라면 다 채워져 있는 트리
