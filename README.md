@@ -117,6 +117,8 @@ infix -> postfix
 
 # 힙(Heap) 이란?
 
+## 0x01. 힙(Heap)의 정의
+
 - **이진 트리**의 한 종류 (이진 힙 - binary heap)
   - 루트 (root) 노드가 언제나 최댓값 or 최솟값을 가짐
     - 최대 힙 (max heap), 최소 힙 (min heap)
@@ -130,10 +132,10 @@ infix -> postfix
 >
 > 이진 탐색 트리: left subtree < 자기자신 < right subtree
 
-## 최대 힙의 ADT
-- `__init__()` : 빈 최대 힙을 생성
-- `insert(item)` : 새로운 원소를 삽입
-- `remove()` : 최대 원소 (root node)를 반환 (동시에 이 노드를 삭제)
+## 0x02. 최대 힙의 ADT
+- __`__init__()`__ : 빈 최대 힙을 생성
+- __`insert(item)`__ : 새로운 원소를 삽입
+- __`remove()`__ : 최대 원소 (root node)를 반환 (동시에 이 노드를 삭제)
 
 
 
