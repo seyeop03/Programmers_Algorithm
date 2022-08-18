@@ -16,6 +16,7 @@ class CircularLinkedList:
     def size(self):
         return self.count
 
+    # tail이 고정되어 있다.
     def insertHead(self,item):
         newNode = Node(item)
         if self.isEmpty():
@@ -25,7 +26,8 @@ class CircularLinkedList:
             newNode.next = self.tail.next
             self.tail.next = newNode
         self.count += 1
-
+         
+    # newNode를 tail로 둔다.
     def insertTail(self,item):
         newNode = Node(item)
         if self.isEmpty():
