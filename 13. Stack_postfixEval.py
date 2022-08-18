@@ -45,7 +45,7 @@ def splitTokens(exprStr):
 
     return tokens
 
-
+# 중위표현식(A+B)을 후위표현식(AB+)로 바꾸기
 def infixToPostfix(tokenList):
     prec = {
         '*': 3,
@@ -77,7 +77,7 @@ def infixToPostfix(tokenList):
 
     return postfixList
 
-
+# 후위표현식(AB+) 계산
 def postfixEval(tokenList):
     opStack = ArrayStack()
 
