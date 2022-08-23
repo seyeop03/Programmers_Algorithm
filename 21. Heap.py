@@ -13,8 +13,18 @@ class MaxHeap:
             while cur != 0 and self.data[cur//2] < item:
                 self.data[cur//2], self.data[cur] = self.data[cur], self.data[cur//2]
                 cur //= 2
-                break
+                if cur == 1:
+                    break
 
+    def remove(self):
+        if len(self.data) > 1:
+            self.data[1], self.data[-1] = self.data[-1], self.data[1]
+            data = self.data.pop(-1)
+            self.maxHeapify(1)
+        else:
+            data = None
+        return data
+        
     def maxHeapify(self, i):
         # 왼쪽 자식 (left child) 의 인덱스를 계산합니다.
         left = 2*i
@@ -24,12 +34,12 @@ class MaxHeap:
 
         smallest = i
         # 왼쪽 자식이 존재하는지, 그리고 왼쪽 자식의 (키) 값이 (무엇보다?) 더 큰지를 판단합니다.
-        if len(self.data)-1 >= left and self.data[smallest] <= self.data[left]:
+        if len(self.data) > left and self.data[smallest] < self.data[left]:
             # 조건이 만족하는 경우, smallest 는 왼쪽 자식의 인덱스를 가집니다.
             smallest = left
 
         # 오른쪽 자식이 존재하는지, 그리고 오른쪽 자식의 (키) 값이 (무엇보다?) 더 큰지를 판단합니다.
-        if len(self.data)-1 >= right and self.data[smallest] <= self.data[right]:
+        if len(self.data) > right and self.data[smallest] < self.data[right]:
             # 조건이 만족하는 경우, smallest 는 오른쪽 자식의 인덱스를 가집니다.
             smallest = right
 
@@ -40,14 +50,7 @@ class MaxHeap:
             # 재귀적 호출을 이용하여 최대 힙의 성질을 만족할 때까지 트리를 정리합니다.
             self.maxHeapify(smallest)      
 
-    def remove(self):
-        if len(self.data) > 1:
-            self.data[1], self.data[-1] = self.data[-1], self.data[1]
-            data = self.data.pop(-1)
-            self.maxHeapify(1)
-        else:
-            data = None
-        return data
+
 
 
 # 힙 정렬의 시간복잡도 : O(N*logN)
@@ -67,15 +70,18 @@ def heapsort(unsorted):
 
 
 h = MaxHeap()
-h.insert(30)
-h.insert(8)
-h.insert(14)
-h.insert(21)
-h.insert(27)
 h.insert(1)
-h.insert(19)
 h.insert(5)
-h.insert(24)
-print(h.data)
-h.remove()
+h.insert(2)
+h.insert(3)
+h.insert(6)
+h.insert(2)
+h.insert(3)
+h.insert(7)
+h.insert(3)
+h.insert(5)
+h.insert(2)
+h.insert(6)
+
+
 print(h.data)
