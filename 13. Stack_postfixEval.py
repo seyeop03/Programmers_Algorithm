@@ -23,7 +23,7 @@ class ArrayStack:
     def peek(self):
         return self.data[-1]
 
-# 120 + 34 따위의 수식을 [120, '+', 34]로 만들기
+# 3 + 7 따위의 수식을 [3, '+', 7]로 만들기
 def splitTokens(exprStr):
     tokens = []
     val = 0
@@ -77,7 +77,7 @@ def infixToPostfix(tokenList):
 
     return postfixList
 
-# 후위표현식(AB+) 계산
+# 후위표현식(37+) 계산
 def postfixEval(tokenList):
     opStack = ArrayStack()
 
