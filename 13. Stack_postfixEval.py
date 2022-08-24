@@ -45,7 +45,7 @@ def splitTokens(exprStr):
 
     return tokens
 
-# 중위표현식(A+B)을 후위표현식(AB+)로 바꾸기
+# 중위표현식(3+7)을 후위표현식(37+)로 바꾸기
 def infixToPostfix(tokenList):
     prec = {
         '*': 3,
@@ -96,7 +96,7 @@ def postfixEval(tokenList):
     return opStack.pop()
 
 
-tokens = splitTokens('11 + 34 * 4')
+tokens = splitTokens('(11 + 34) * 4')
 postfix = infixToPostfix(tokens)
 val = postfixEval(postfix)
 
