@@ -23,7 +23,7 @@ class CircularLinkedList:
             self.tail = newNode
             newNode.next = newNode
         else:
-            newNode.next = self.tail.next
+            newNode.next = self.tail.next # tail의 next는 head임!
             self.tail.next = newNode
         self.count += 1
          

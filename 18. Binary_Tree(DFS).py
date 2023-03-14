@@ -77,7 +77,7 @@ class BinaryTree:
         if self.root:
             return self.root.inorder()
         else:
-            return 0
+            return []
 
     def preorder(self):
         if self.root:

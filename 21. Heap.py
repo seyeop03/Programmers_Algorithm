@@ -26,19 +26,15 @@ class MaxHeap:
         return data
         
     def maxHeapify(self, i):
-        # 왼쪽 자식 (left child) 의 인덱스를 계산합니다.
-        left = 2*i
-
-        # 오른쪽 자식 (right child) 의 인덱스를 계산합니다.
-        right = 2*i + 1
-
+        left = 2*i # 왼쪽 자식 (left child) 인덱스 계산
+        right = 2*i + 1 # 오른쪽 자식 (right child) 인덱스를 계산
         smallest = i
-        # 왼쪽 자식이 존재하는지, 그리고 왼쪽 자식의 (키) 값이 (무엇보다?) 더 큰지를 판단합니다.
+        # 왼쪽 자식이 존재하는지, 그리고 왼쪽 자식의 (키) 값이 (무엇보다?) 더 큰지를 판단
         if len(self.data) > left and self.data[smallest] < self.data[left]:
             # 조건이 만족하는 경우, smallest 는 왼쪽 자식의 인덱스를 가집니다.
             smallest = left
 
-        # 오른쪽 자식이 존재하는지, 그리고 오른쪽 자식의 (키) 값이 (무엇보다?) 더 큰지를 판단합니다.
+        # 오른쪽 자식이 존재하는지, 그리고 오른쪽 자식의 (키) 값이 (무엇보다?) 더 큰지를 판단
         if len(self.data) > right and self.data[smallest] < self.data[right]:
             # 조건이 만족하는 경우, smallest 는 오른쪽 자식의 인덱스를 가집니다.
             smallest = right

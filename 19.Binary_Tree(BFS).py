@@ -48,5 +48,18 @@ class BinaryTree:
         return traversal
 
 
-def solution(x):
-    return 0
+# node1 = Node(1)
+# node2 = Node(2)
+# node3 = Node(3)
+# node4 = Node(4)
+# node5 = Node(5)
+# node6 = Node(6)
+# node7 = Node(7)
+# node1.left = node2
+# node1.right = node3
+# node2.left = node4
+# node2.right = node5
+# node3.left = node6
+# node3.right = node7
+# binary_tree = BinaryTree(node1)
+# print(binary_tree.bft())
